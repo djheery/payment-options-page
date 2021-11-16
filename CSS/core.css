@@ -151,6 +151,9 @@ ul {
   transform: scale(0)
 }
 
+.text-center {
+  text-align: center;
+}
  #us-payments:checked + .bambridge-custom-radio::before, #uk-payments:checked + .bambridge-custom-radio::before {
   transform: scale(1);
 }
@@ -191,6 +194,7 @@ ul {
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 3;
 }
 
 .tile-icon {
@@ -208,6 +212,7 @@ ul {
   transform: rotate(-20deg)
 }
 
+
 .tile-heading {
   text-align: center;
 }
@@ -221,7 +226,7 @@ ul {
   position: absolute;
   top: 0;
   right: 0;
-  left: 100%;
+  left: 0;
   bottom: 0;
   background-color: #000;
   opacity: .8;
@@ -237,4 +242,12 @@ ul {
 
 .block-2:hover > .filter {
   left: 0
+}
+
+.block-2 {
+  width: 100%;
+  background-image: url('/CSS/img/plan.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
 }

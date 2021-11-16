@@ -6,7 +6,7 @@
   padding: 15px;
 }  
 
-.section-bacc-content, .top-section, .section-heading, .tile, .top-section, .full-section, .tile-section {
+.section-bacc-content, .top-section, .section-heading, .tile, .top-section, .full-section, .tile-section, .full-section__inner {
   flex-direction: column;
 }
 
@@ -17,14 +17,16 @@
 
 .full-section {
   background-color: #e6e6e6;
-  /* padding: 15px; */
+  padding: 15px;
 }
 
 .full-section__inner {
   /* background-color: #fff; */
 }
+
 .padding {
   background-color: #fff;
+  padding: 10px;
 }
 
 .tile {

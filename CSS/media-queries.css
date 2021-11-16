@@ -36,6 +36,10 @@
     width: 100%; 
     height: auto;
    }
+
+   .block-2 {
+     height: 400px;
+   }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -54,6 +58,9 @@
     padding: 40px;
   }
 
+  .block-2 {
+    height: 100%
+  }
 
 
   .section-heading .section-text {
@@ -70,6 +77,10 @@
     flex-direction: row;
   }
 
+  .full-section {
+    width: 100%;
+  }
+
   .top-section .section-text {
     align-items: unset;
   }
@@ -81,10 +92,11 @@
   
   .block-1 {
     padding: 20px;
+    width: 90%
   }
 
   .padding {
-    padding: 40px;
+    padding: 80px 40px;
   }
 
   .block-2 {
@@ -94,5 +106,37 @@
     background-size: cover;
   }
 
+  .block-2 p {
+    opacity: 0;
+    transition: all .5s ease-in;
+  }
 
+  .filter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 100%;
+    bottom: 0;
+    background-color: #000;
+    opacity: .8;
+    transition: all .3s ease-in
+  }
+  
+  .full-section:hover .block-2 > .filter {
+    left: 0;
+  }
+
+  .full-section:hover .block-2 p {
+    opacity: 1;
+  }
+
+  .full-section__inner {
+    flex-direction: row;
+  }
+  .full-section {
+    padding: 0;
+  }
+  .full-section:hover {
+    cursor: pointer;
+  }
 }

@@ -18,7 +18,7 @@ const TILES_STATE = (() => {
       internalLink: true,
       email: false,
       icon: "/CSS/img/cheque.png",
-      body: 'We continue to take payment via cheque. Click here view our details in order to make a payment.',
+      body: '<div class="text-center" style=" text-align:center;font-size: .8rem">We continue to take payment via cheque.<br><br>Post to: <br><br>442 Broadway 2nd Floor, New York, NY 10013</div>',
       linkData: 'https://bambridgeaccountants.com/us-cheque-details'
     },
     {
@@ -28,7 +28,7 @@ const TILES_STATE = (() => {
       internalLink: true,
       icon: "/CSS/img/phone-call.png",
       email: false,
-      linkData: 'https://bambridgeaccountants.com/pay-by-phone'
+      linkData: 'https://bambridgeaccountants.com/book-phone-payment'
     },
     {
       title: 'Pay via Zelle',
@@ -37,7 +37,18 @@ const TILES_STATE = (() => {
       icon: '/CSS/img/zelle.png',
       internalLink: true,
       email: false,
-      linkData: '#'
+      linkData: ''
+    },
+    {
+      title: 'Bank Transfer',
+      rainbow: true,
+      body: `<div class="text-center" style="font-size: .8rem">Use your Full name in the transfer description<br><br>
+      Bambridge Tax and Accountancy<br>Acc No - 6792033907<br>
+      Wire Routing Number - 021000089</div>`,
+      icon: '/CSS/img/bank.png',
+      internalLink: true,
+      email: false,
+      linkData: ''
     }
   ]
 
@@ -60,7 +71,7 @@ const TILES_STATE = (() => {
       internalLink: true,
       email: false,
       icon: "/CSS/img/cheque.png",
-      body: 'We continue to take payment via cheque. Click here view our details and make a payment.',
+      body: '<div class="text-center" style=" text-align:center;font-size: .8rem">We continue to take payment via cheque.<br><br>Post to: <br><br>7 Henrieta St, London, WC2E 8PS </div>',
       linkData: 'https://bambridgeaccountants.com/uk-cheque-details'
     },
     {
@@ -70,7 +81,17 @@ const TILES_STATE = (() => {
       icon: "/CSS/img/phone-call.png",
       internalLink: true,
       email: false,
-      linkData: 'https://bambridgeaccountants.com/pay-by-phone'
+      linkData: 'https://bambridgeaccountants.com/book-phone-payment'
+    },
+    {
+      title: 'Bank Transfer',
+      rainbow: true,
+      body: `<div class="text-center" style="font-size:.8rem">Use your Full name in the transfer description<br><br>
+      Bambridge Tax and Accountancy<br>Acc No - 13915492<br>Sort code - 20 71 74</div>`,
+      icon: '/CSS/img/bank.png',
+      internalLink: true,
+      email: false,
+      linkData: ''
     },
     {
       title: 'Pay by Donation',
@@ -162,6 +183,9 @@ const TILES_UI = (() => {
         newString += s
       })  
       return newString
+    },
+    insertLink: (linkData) => {
+
     },
     insertRainbow: (data) => {
      if(data.rainbow === true) return '/CSS/img/555-7.png'
