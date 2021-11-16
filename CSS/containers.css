@@ -31,6 +31,8 @@
 
 .tile {
   justify-content: baseline;
+  text-align: center;
+  align-items: center;
 }
 .tile {
   border: 1px solid #eee;
@@ -49,3 +51,10 @@
   width: 70% !important
 }
 
+.highlighted-box {
+  border-radius: 8px; 
+  padding: 10px;
+  background-color: #d4e09b;
+  font-size: .75rem;
+  margin: 15px 0;
+}

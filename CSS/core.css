@@ -70,6 +70,11 @@ ul {
   position: absolute;
 }
 
+.highlight-text {
+  /* font-weight: 600; */
+  font-size: 1.3rem
+}
+
 .bacc-link {
   color: #BA992F;
 }
@@ -133,7 +138,7 @@ ul {
   display: flex;
   position: relative;
 }
- #us-payments, #uk-payments {
+ #us-payments, #uk-payments , #uk-service, #us-service {
   opacity: 0;
   height: 16px;
   width: 16px;
@@ -141,7 +146,7 @@ ul {
   z-index: 5
 }
 
- #us-payments + .bambridge-custom-radio::before, #uk-payments + .bambridge-custom-radio::before  {
+ #us-payments + .bambridge-custom-radio::before, #uk-payments + .bambridge-custom-radio::before, #us-service + .bambridge-custom-radio::before, #uk-service + .bambridge-custom-radio::before  {
   content: '';
   width: 0.5em;
   height: 0.5em;
@@ -154,10 +159,11 @@ ul {
 .text-center {
   text-align: center;
 }
- #us-payments:checked + .bambridge-custom-radio::before, #uk-payments:checked + .bambridge-custom-radio::before {
+ #us-payments:checked + .bambridge-custom-radio::before, #uk-payments:checked + .bambridge-custom-radio::before, #uk-service:checked + .bambridge-custom-radio::before,
+ #us-service:checked + .bambridge-custom-radio::before {
   transform: scale(1);
 }
- #us-payments:focus + .bambridge-custom-radio, #uk-payments:focus + .bambridge-custom-radio   {
+ #us-payments:focus + .bambridge-custom-radio, #uk-payments:focus + .bambridge-custom-radio,  #us-service:focus + .bambridge-custom-radio, #uk-service:focus + .bambridge-custom-radio   {
   box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em #ba9f2a;
 }
 
@@ -250,4 +256,10 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   height: 200px;
+}
+
+.rainbow:hover  {
+  content: '1.5% of your fee will go to charity';
+  display: block;
+  font-size: 10rem;
 }

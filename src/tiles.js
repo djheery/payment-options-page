@@ -1,6 +1,35 @@
 const TILES_STATE = (() => {
   const usTiles = [
     {
+      title: 'Bank Transfer',
+      rainbow: true,
+      body: `<div class="text-center" style="font-size: .8rem">Use your Full name in the transfer description<br><br>
+      Bambridge Tax and Accountancy<br>Acc No - <span class="accent-clr">6792033907</span><br>
+      Wire Routing Number - <span class="accent-clr">021000089</span></div>`,
+      icon: '/CSS/img/bank.png',
+      internalLink: true,
+      email: false,
+      linkData: ''
+    },
+    {
+      title: 'Pay By Cheque',
+      rainbow: true,
+      internalLink: true,
+      email: false,
+      icon: "/CSS/img/cheque.png",
+      body: '<div class="text-center" style=" text-align:center;font-size: .8rem">We continue to take payment via cheque.<br><br>Post to: <br><br><span class="accent-clr">442 Broadway 2nd Floor, New York, NY 10013</span></div>',
+      linkData: 'https://bambridgeaccountants.com/us-cheque-details'
+    },
+    {
+      title: 'Pay via Zelle',
+      rainbow: true,
+      body: 'We offer quick and easy payments via zelle,<br><br> Our Details are:<br><br> <span class="bacc-link" style="font-size:.8rem;">alistair@bambridgeaccountants.com</span>',
+      icon: '/CSS/img/zelle.png',
+      internalLink: true,
+      email: false,
+      linkData: ''
+    },
+    {
       title: 'Pay By Card',
       rainbow: false,
       body: `We accept Debit and Credit cards. Including, but not limited to, Visa, Mastercard, Ammex, Apple Pay. Your payment will be taken via stripe`,
@@ -13,15 +42,6 @@ const TILES_STATE = (() => {
       },
     },
     {
-      title: 'Pay By Cheque',
-      rainbow: true,
-      internalLink: true,
-      email: false,
-      icon: "/CSS/img/cheque.png",
-      body: '<div class="text-center" style=" text-align:center;font-size: .8rem">We continue to take payment via cheque.<br><br>Post to: <br><br>442 Broadway 2nd Floor, New York, NY 10013</div>',
-      linkData: 'https://bambridgeaccountants.com/us-cheque-details'
-    },
-    {
       title: 'Pay by Phone',
       rainbow: false,
       body: 'If you would like to pay by phone, book in an appointment with us today',
@@ -30,40 +50,26 @@ const TILES_STATE = (() => {
       email: false,
       linkData: 'https://bambridgeaccountants.com/book-phone-payment'
     },
-    {
-      title: 'Pay via Zelle',
-      rainbow: true,
-      body: 'We offer quick and easy payments via zelle,<br><br> Our Details are:<br><br> <span class="bacc-link" style="font-size:.8rem;">alistair@bambridgeaccountants.com</span>',
-      icon: '/CSS/img/zelle.png',
-      internalLink: true,
-      email: false,
-      linkData: ''
-    },
-    {
-      title: 'Bank Transfer',
-      rainbow: true,
-      body: `<div class="text-center" style="font-size: .8rem">Use your Full name in the transfer description<br><br>
-      Bambridge Tax and Accountancy<br>Acc No - 6792033907<br>
-      Wire Routing Number - 021000089</div>`,
-      icon: '/CSS/img/bank.png',
-      internalLink: true,
-      email: false,
-      linkData: ''
-    }
   ]
 
   const ukTiles = [
     {
       title: 'Pay By Card',
-      rainbow: false,
-      body: `We accept Debit and Credit cards. Including, but not limited to, Visa, Mastercard, Ammex, Apple Pay. Your payment will be taken via stripe`,
-      internalLink: false,
+      rainbow: true,
+      body: `If you would like to pay by card, you can do so now! Click this tile to be directed to the payment page`,
+      internalLink: true,
       icon: "/CSS/img/credit-card.png",
-      email: true,
-      linkData: {
-        subject: 'Bill Payment - Via Stripe',
-        body: 'Hi Bambridge, I would like to pay my bill via stripe, Many Thanks'
-      },
+      email: false,
+      linkData: 'https://bambridgeaccountants.com/payments',
+    },
+    {
+      title: 'Pay by Phone',
+      rainbow: false,
+      body: 'If you would like to pay over phone,  we require you to book in an appointment with us today. To do so click here and you will be directed to our booking page.',
+      icon: "/CSS/img/phone-call.png",
+      internalLink: true,
+      email: false,
+      linkData: 'https://bambridgeaccountants.com/book-phone-payment'
     },
     {
       title: 'Pay By Cheque',
@@ -71,36 +77,27 @@ const TILES_STATE = (() => {
       internalLink: true,
       email: false,
       icon: "/CSS/img/cheque.png",
-      body: '<div class="text-center" style=" text-align:center;font-size: .8rem">We continue to take payment via cheque.<br><br>Post to: <br><br>7 Henrieta St, London, WC2E 8PS </div>',
+      body: '<div class="text-center" style=" text-align:center;font-size: .8rem">We continue to take payment via cheque.<br><br>Post to: <br><br><span class"accent-clr">7 Henrieta St, London, WC2E 8PS</span> </div>',
       linkData: 'https://bambridgeaccountants.com/uk-cheque-details'
-    },
-    {
-      title: 'Pay by Phone',
-      rainbow: false,
-      body: 'If you would like to pay by phone, book in an appointment with us today',
-      icon: "/CSS/img/phone-call.png",
-      internalLink: true,
-      email: false,
-      linkData: 'https://bambridgeaccountants.com/book-phone-payment'
     },
     {
       title: 'Bank Transfer',
       rainbow: true,
       body: `<div class="text-center" style="font-size:.8rem">Use your Full name in the transfer description<br><br>
-      Bambridge Tax and Accountancy<br>Acc No - 13915492<br>Sort code - 20 71 74</div>`,
+      Bambridge Tax and Accountancy<br>Acc No - <span class="accent-clr">13915492</span><br>Sort code - <span class="accent-clr">20 71 74</span></div>`,
       icon: '/CSS/img/bank.png',
       internalLink: true,
       email: false,
       linkData: ''
     },
     {
-      title: 'Pay by Donation',
-      rainbow: true,
-      body: 'Pay right here on Squarespace. Click here to pay your invoice on squarespace.',
+      title: 'Pay Another Way?',
+      rainbow: false,
+      body: '<span style="font-size: .8rem;">We offer a variety of ways to pay for our service. Below are the most common ways of making a payment to us. If you wish to pay another way, please do not hesitate to send us an email at: <a href="mailto:alistair@bambridgeaccountants.com?subject=Alternative%20payment%20Options&body=Hi%20Alistair,%0d%0a%0d%0aI%20would%20like%20to%20discuss%20my%20payment%20options,%0d%0a%0d%0aMany%20thanks%0d%0a%0d%0a" class=\'bacc-link\'>alistair@bambridgeaccountants.com</a></span>',
       icon: '/CSS/img/donate.png',
       internalLink: true,
       email: false,
-      linkData: 'https://bambridgeaccountants.com/payments'
+      linkData: ''
     },
     {
       title: 'Pay via Zelle',
@@ -109,8 +106,8 @@ const TILES_STATE = (() => {
       icon: '/CSS/img/zelle.png',
       internalLink: true,
       email: false,
-      linkData: '#'
-    }
+      linkData: ''
+    }, 
   ]
 
   return {
@@ -131,7 +128,8 @@ const TILES_STATE = (() => {
 
 const TILES_UI = (() => {
   const selectors = {
-    radioSection: document.querySelector('.radio-section'),
+    radioSection: document.querySelector('.radio-payments'),
+    radioService: document.querySelector('.radio-service'),
     tileContainer: document.querySelector('.tile-container'),
     tileSectionHeading: document.querySelector('.tile-section-heading')
   }
@@ -145,11 +143,10 @@ const TILES_UI = (() => {
       for(let i = 0; i < pt.length; i++) {
         selectors.tileContainer.innerHTML += `
         <div class="tile pos-r flex">
-          <a href="" class="tile-link tile-${i}"></a>
+          ${TILES_UI.insertLink(pt[i])}
           <div class="tile-heading mgb-10">
             <h3 class="text-upper tile-heading">${pt[i].title}</h3>
-            <img src=${TILES_UI.insertRainbow(pt[i])} alt="" class="rainbow">
-            <img src=${TILES_UI.insertRainbow(pt[i])} alt="" class="rainbow r2">
+            ${TILES_UI.insertRainbow(pt[i])}
           </div>
           <div class="tile-icon">
             <img src="${pt[i].icon}">
@@ -159,18 +156,14 @@ const TILES_UI = (() => {
           </div>
         </div>
         `
-        const currentTile = document.querySelector(`.tile-${i}`)
-        TILES_UI.produceLinkdata(pt[i], currentTile)
+       
       }
     },
-    produceLinkdata: (tileData, currentTile) => {
+    produceLinkdata: (tileData) => {
       if(tileData.email === true) {
-        currentTile.setAttribute(
-          'href', 
-          `mailto:alistair@bambridgeaccountants.com?subject=${TILES_UI.mailCreator(tileData.linkData.subject)}&body=${TILES_UI.mailCreator(tileData.linkData.body)}`
-          )
+        return  `<a href="mailto:alistair@bambridgeaccountants.com?subject=${TILES_UI.mailCreator(tileData.linkData.subject)}&body=${TILES_UI.mailCreator(tileData.linkData.body)}" class="tile-link"></a>`
       } else {
-        currentTile.setAttribute('href', `${tileData.linkData}`)
+        return `<a href="${tileData.linkData}" class="tile-link"></a>`
       }
     }, 
     mailCreator: (str) => {
@@ -184,27 +177,32 @@ const TILES_UI = (() => {
       })  
       return newString
     },
-    insertLink: (linkData) => {
-
+    insertLink: (d) => {
+      if(d.linkData === '') {
+        return ''
+      } else {
+        return TILES_UI.produceLinkdata(d)
+      }
     },
     insertRainbow: (data) => {
-     if(data.rainbow === true) return '/CSS/img/555-7.png'
+     if(data.rainbow === true) {
+       return `            
+       <p class="highlighted-box">1.5% of your fee will go to charity</p>
+       <img src="/CSS/img/555-7.png" alt="" class="rainbow">
+       <img src="/CSS/img/555-7.png" alt="" class="rainbow r2">`
+     } else {
+       return ''
+     }
     },
     generateHeading: (option) => {
       if(option === 'us-payments') {
         selectors.tileSectionHeading.innerHTML = `
         <h2 class="text-upper accent-clr">Payment Options For the US</h2>
-        <div class="section-text mgb-20">
-          <p>Make your money go a little further- If you pay via one of the payment methods with a <span class="pos-r">rainbow <img class="text-rainbow" src="/CSS/img/555-7.png"> </span>next to, 1.5% of the fee will go to a charity of your choice. <span class="fw-bold">Click a tile</span> to be directed to the right page</p>
-        </div>
         `
       }
       else {
         selectors.tileSectionHeading.innerHTML = `
-        <h2 class="text-upper accent-clr">Payment Options For the UK</h2>
-        <div class="section-text mgb-20">
-          <p>Make your money go a little further- If you pay via one of the payment methods with a <span class="pos-r">rainbow <img class="text-rainbow" src="/CSS/img/555-7.png"> </span>next to, 1.5% of the fee will go to a charity of your choice. <span class="fw-bold">Click a tile</span> to be directed to the right page</p>
-        </div>
+        <h2 class="text-upper accent-clr mgb-20">Payment Options For the UK</h2>
         `
       }
     }
