@@ -4,7 +4,7 @@ const TILES_STATE = (() => {
       title: 'Pay By Card',
       rainbow: false,
       body: `We accept Debit and Credit cards. Including, but not limited to, Visa, Mastercard, Ammex, Apple Pay. Your payment will be taken via stripe`,
-      icon: "/CSS/img/credit-card.png",
+      icon: "/s/credit-card.png",
       internalLink: false,
       email: true,
       linkData: {
@@ -17,7 +17,7 @@ const TILES_STATE = (() => {
       rainbow: true,
       internalLink: true,
       email: false,
-      icon: "/CSS/img/cheque.png",
+      icon: "/s/cheque.png",
       body: '<div class="text-center" style=" text-align:center;font-size: .8rem">We continue to take payment via cheque.<br><br>Post to: <br><br>442 Broadway 2nd Floor, New York, NY 10013</div>',
       linkData: 'https://bambridgeaccountants.com/us-cheque-details'
     },
@@ -26,7 +26,7 @@ const TILES_STATE = (() => {
       rainbow: false,
       body: 'If you would like to pay by phone, book in an appointment with us today',
       internalLink: true,
-      icon: "/CSS/img/phone-call.png",
+      icon: "/s/phone-call.png",
       email: false,
       linkData: 'https://bambridgeaccountants.com/book-phone-payment'
     },
@@ -34,7 +34,7 @@ const TILES_STATE = (() => {
       title: 'Pay via Zelle',
       rainbow: true,
       body: 'We offer quick and easy payments via zelle,<br><br> Our Details are:<br><br> <span class="bacc-link" style="font-size:.8rem;">alistair@bambridgeaccountants.com</span>',
-      icon: '/CSS/img/zelle.png',
+      icon: '/s/zelle.png',
       internalLink: true,
       email: false,
       linkData: ''
@@ -45,7 +45,7 @@ const TILES_STATE = (() => {
       body: `<div class="text-center" style="font-size: .8rem">Use your Full name in the transfer description<br><br>
       Bambridge Tax and Accountancy<br>Acc No - 6792033907<br>
       Wire Routing Number - 021000089</div>`,
-      icon: '/CSS/img/bank.png',
+      icon: '/s/bank.png',
       internalLink: true,
       email: false,
       linkData: ''
@@ -58,7 +58,7 @@ const TILES_STATE = (() => {
       rainbow: false,
       body: `We accept Debit and Credit cards. Including, but not limited to, Visa, Mastercard, Ammex, Apple Pay. Your payment will be taken via stripe`,
       internalLink: false,
-      icon: "/CSS/img/credit-card.png",
+      icon: "/s/credit-card.png",
       email: true,
       linkData: {
         subject: 'Bill Payment - Via Stripe',
@@ -70,7 +70,7 @@ const TILES_STATE = (() => {
       rainbow: true,
       internalLink: true,
       email: false,
-      icon: "/CSS/img/cheque.png",
+      icon: "/s/cheque.png",
       body: '<div class="text-center" style=" text-align:center;font-size: .8rem">We continue to take payment via cheque.<br><br>Post to: <br><br>7 Henrieta St, London, WC2E 8PS </div>',
       linkData: 'https://bambridgeaccountants.com/uk-cheque-details'
     },
@@ -78,7 +78,7 @@ const TILES_STATE = (() => {
       title: 'Pay by Phone',
       rainbow: false,
       body: 'If you would like to pay by phone, book in an appointment with us today',
-      icon: "/CSS/img/phone-call.png",
+      icon: "/s/phone-call.png",
       internalLink: true,
       email: false,
       linkData: 'https://bambridgeaccountants.com/book-phone-payment'
@@ -88,7 +88,7 @@ const TILES_STATE = (() => {
       rainbow: true,
       body: `<div class="text-center" style="font-size:.8rem">Use your Full name in the transfer description<br><br>
       Bambridge Tax and Accountancy<br>Acc No - 13915492<br>Sort code - 20 71 74</div>`,
-      icon: '/CSS/img/bank.png',
+      icon: '/s/bank.png',
       internalLink: true,
       email: false,
       linkData: ''
@@ -97,7 +97,7 @@ const TILES_STATE = (() => {
       title: 'Pay by Donation',
       rainbow: true,
       body: 'Pay right here on Squarespace. Click here to pay your invoice on squarespace.',
-      icon: '/CSS/img/donate.png',
+      icon: '/s/donate.png',
       internalLink: true,
       email: false,
       linkData: 'https://bambridgeaccountants.com/payments'
@@ -106,7 +106,7 @@ const TILES_STATE = (() => {
       title: 'Pay via Zelle',
       rainbow: true,
       body: 'We offer quick and easy payments via zelle,<br><br> Our Details are:<br><br> <span class="bacc-link" style="font-size:.8rem;">alistair@bambridgeaccountants.com</span>',
-      icon: '/CSS/img/zelle.png',
+      icon: '/s/zelle.png',
       internalLink: true,
       email: false,
       linkData: '#'
@@ -188,14 +188,14 @@ const TILES_UI = (() => {
 
     },
     insertRainbow: (data) => {
-     if(data.rainbow === true) return '/CSS/img/555-7.png'
+     if(data.rainbow === true) return '/s/555-7.png'
     },
     generateHeading: (option) => {
       if(option === 'us-payments') {
         selectors.tileSectionHeading.innerHTML = `
         <h2 class="text-upper accent-clr">Payment Options For the US</h2>
         <div class="section-text mgb-20">
-          <p>Make your money go a little further- If you pay via one of the payment methods with a <span class="pos-r">rainbow <img class="text-rainbow" src="/CSS/img/555-7.png"> </span>next to, 1.5% of the fee will go to a charity of your choice. <span class="fw-bold">Click a tile</span> to be directed to the right page</p>
+          <p>Make your money go a little further- If you pay via one of the payment methods with a <span class="pos-r">rainbow <img class="text-rainbow" src="/s/555-7.png"> </span>next to, 1.5% of the fee will go to a charity of your choice. <span class="fw-bold">Click a tile</span> to be directed to the right page</p>
         </div>
         `
       }
@@ -203,7 +203,7 @@ const TILES_UI = (() => {
         selectors.tileSectionHeading.innerHTML = `
         <h2 class="text-upper accent-clr">Payment Options For the UK</h2>
         <div class="section-text mgb-20">
-          <p>Make your money go a little further- If you pay via one of the payment methods with a <span class="pos-r">rainbow <img class="text-rainbow" src="/CSS/img/555-7.png"> </span>next to, 1.5% of the fee will go to a charity of your choice. <span class="fw-bold">Click a tile</span> to be directed to the right page</p>
+          <p>Make your money go a little further- If you pay via one of the payment methods with a <span class="pos-r">rainbow <img class="text-rainbow" src="/s/555-7.png"> </span>next to, 1.5% of the fee will go to a charity of your choice. <span class="fw-bold">Click a tile</span> to be directed to the right page</p>
         </div>
         `
       }
