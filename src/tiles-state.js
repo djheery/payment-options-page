@@ -139,6 +139,12 @@ const TILES_STATE = (() => {
         case 'us-payments' :
           return usTiles;
           break;
+        case 'us-service' :
+          return usTiles 
+          break;
+        case 'uk-service' : 
+          return ukTiles;
+          break;
         default :
           return ukTiles;
       }

@@ -2,9 +2,7 @@ const TILES = (() => {
   const ui = TILES_UI.getSelectors()
   const loadEventListeners = () => {
     ui.radioSection.addEventListener('change', e => changeTiles(e.target.id))
-    ui.radioService.addEventListener('change', e => {
-      console.log(e.target)
-    })
+    ui.radioService.addEventListener('change', e => changeTiles(e.target.id))
   }
 
   const changeTiles = (id) => {
