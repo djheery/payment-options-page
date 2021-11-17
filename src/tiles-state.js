@@ -3,9 +3,14 @@ const TILES_STATE = (() => {
     {
       title: 'Bank Transfer',
       rainbow: true,
-      body: `<div class="text-center" style="font-size: .8rem">Use your Full name in the transfer description<br><br>
-      Bambridge Tax and Accountancy<br>Bank - <span class="accent-clr">Barclays</span><br>Acc No - <span class="accent-clr">6792033907</span><br>
-      Wire Routing Number - <span class="accent-clr">021000089</span></div>`,
+      body: {
+        ukService: `<div class="text-center" style="font-size: .8rem">Use your Full name in the transfer description<br><br>
+        Bambridge Tax and Accountancy<br>Bank: <span class="accent-clr">Barclays</span><br>Acc No: <span class="accent-clr">13915492</span><br>
+        Sort Code: <span class="accent-clr">20-71-74</span></div>`,
+        usService: `<div class="text-center" style="font-size: .8rem">Use your Full name in the transfer description<br><br>
+        Bambridge Tax and Accountancy<br>Bank: <span class="accent-clr">Citi Bank</span><br>Acc No: <span class="accent-clr">6792033907</span><br>
+        Wire Routing Number: <span class="accent-clr">021000089</span></div>`
+      },
       icon: '/CSS/img/bank.png',
       internalLink: true,
       email: false,
@@ -95,8 +100,12 @@ const TILES_STATE = (() => {
     {
       title: 'Bank Transfer',
       rainbow: true,
-      body: `<div class="text-center" style="font-size:.8rem">Use your Full name in the transfer description<br><br>
-      Bambridge Tax and Accountancy<br>Bank - <span class="accent-clr">Barclays</span><br>Acc No - <span class="accent-clr">13915492</span><br>Sort code - <span class="accent-clr">20 71 74</span></div>`,
+      body: {
+        ukService: `<div class="text-center" style="font-size:.8rem">Use your Full name in the transfer description<br><br>
+        Bambridge Tax and Accountancy<br>Bank: <span class="accent-clr">Barclays</span><br>Acc No: <span class="accent-clr">83638081</span><br>Sort code: <span class="accent-clr">20-71-74</span></div>`,
+        usService: `<div class="text-center" style="font-size:.8rem">Use your Full name in the transfer description<br><br>
+        Bambridge Tax and Accountancy<br>Bank: <span class="accent-clr">Barclays</span><br>Acc No: <span class="accent-clr">13915492</span><br>Sort code: <span class="accent-clr">20-71-74</span></div>`
+      },
       icon: '/CSS/img/bank.png',
       internalLink: true,
       email: false,
@@ -127,31 +136,22 @@ const TILES_STATE = (() => {
 
   const currentState = {
     currency: 'GBP',
-    serviceType: 'UK'
+    serviceType: 'uk-service'
   }
 
   return {
     polymorphism: (id) => {
-      switch(id) {
-        case 'uk-payments' :
-         return ukTiles;
-          break;
-        case 'us-payments' :
-          return usTiles;
-          break;
-        case 'us-service' :
-          return usTiles 
-          break;
-        case 'uk-service' : 
-          return ukTiles;
-          break;
-        default :
-          return ukTiles;
-      }
+
     }, 
-    changeState: (stateChange) => {
-      if(stateChange.serviceType) currentState.serviceType = stateChange.serviceType
-      if(stateChange.currency) currentState.currency = stateChange.currency
+    changeReturnState: (newState) => {
+      newState.currency !== null ?
+        currentState.currency = newState.currency :
+        currentState.serviceType = newState.serviceType
+      return currentState
+    },
+    returnTiles: () => { 
+      const tiles = currentState.currency === 'GBP' ? ukTiles : usTiles 
+      return tiles
     }
   }
 })()

@@ -10,21 +10,21 @@ const TILES_UI = (() => {
     getSelectors: () => {
       return selectors
     },
-    createTiles: (pt) => {
+    createTiles: (state, tiles) => {
       selectors.tileContainer.innerHTML = ''
-      for(let i = 0; i < pt.length; i++) {
+      for(let i = 0; i < tiles.length; i++) {
         selectors.tileContainer.innerHTML += `
         <div class="tile pos-r flex">
-          ${TILES_UI.insertLink(pt[i])}
+          ${TILES_UI.insertLink(tiles[i])}
           <div class="tile-heading mgb-10">
-            <h3 class="text-upper tile-heading">${pt[i].title}</h3>
-            ${TILES_UI.insertRainbow(pt[i])}
+            <h3 class="text-upper tile-heading">${tiles[i].title}</h3>
+            ${TILES_UI.insertRainbow(tiles[i])}
           </div>
           <div class="tile-icon">
-            <img src="${pt[i].icon}">
+            <img src="${tiles[i].icon}">
           </div>
           <div class="tile-text">
-            <p>${pt[i].body}</p>
+            <p>${TILES_UI.checkBankTransfer(state, tiles[i])}</p>
           </div>
         </div>
         `
@@ -71,17 +71,24 @@ const TILES_UI = (() => {
        return ''
      }
     },
+    checkBankTransfer: (state, tile) => {
+      console.log('Hello')
+      if(tile.title !== 'Bank Transfer') return tile.body
+      if(tile.title === 'Bank Transfer') {
+        const body = state.serviceType === 'uk-service' ? 
+          tile.body.ukService : 
+          tile.body.usService
+        return body  
+      } 
+    },
     generateHeading: (option) => {
-      if(option === 'us-payments') {
+      option === 'USD' ?
         selectors.tileSectionHeading.innerHTML = `
         <h2 class="text-upper accent-clr mgb-20">Payment Options For the US</h2>
-        `
-      }
-      else {
+        ` :
         selectors.tileSectionHeading.innerHTML = `
         <h2 class="text-upper accent-clr mgb-20">Payment Options For the UK</h2>
         `
-      }
     }
   }
 })()

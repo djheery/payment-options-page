@@ -1,20 +1,21 @@
 const TILES = (() => {
   const ui = TILES_UI.getSelectors()
   const loadEventListeners = () => {
-    ui.radioSection.addEventListener('change', e => changeTiles(e.target.id))
-    ui.radioService.addEventListener('change', e => changeTiles(e.target.id))
+    ui.radioSection.addEventListener('change', e => changeTiles({currency: e.target.id, serviceType: null}))
+    ui.radioService.addEventListener('change', e => changeTiles({currency: null, serviceType: e.target.id}))
   }
 
   const changeTiles = (id) => {
-    const pageType = TILES_STATE.polymorphism(id)
-    TILES_UI.generateHeading(id)
-    TILES_UI.createTiles(pageType)
+    const state = TILES_STATE.changeReturnState(id)
+    const tiles = TILES_STATE.returnTiles()
+    TILES_UI.generateHeading(state.currency)
+    TILES_UI.createTiles(state, tiles)
   }
 
   return {
     init: () => {
       loadEventListeners()
-      changeTiles('uk-payments')
+      changeTiles({currency: 'uk-payments', serviceType: null})
       TILES_UI.insertLazyLinkData(
         {
           subject: 'Set Up a Payment Plan',

@@ -45,6 +45,10 @@ ul {
   gap: 15px
 }
 
+.arrow {
+  display:none;
+}
+
 .align-center {
   align-items: center;
   justify-content: center;
@@ -138,7 +142,7 @@ ul {
   display: flex;
   position: relative;
 }
- #us-payments, #uk-payments , #uk-service, #us-service {
+ #USD, #GBP , #uk-service, #us-service {
   opacity: 0;
   height: 16px;
   width: 16px;
@@ -146,7 +150,7 @@ ul {
   z-index: 5
 }
 
- #us-payments + .bambridge-custom-radio::before, #uk-payments + .bambridge-custom-radio::before, #us-service + .bambridge-custom-radio::before, #uk-service + .bambridge-custom-radio::before  {
+ #USD + .bambridge-custom-radio::before, #GBP + .bambridge-custom-radio::before, #us-service + .bambridge-custom-radio::before, #uk-service + .bambridge-custom-radio::before  {
   content: '';
   width: 0.5em;
   height: 0.5em;
@@ -159,11 +163,11 @@ ul {
 .text-center {
   text-align: center;
 }
- #us-payments:checked + .bambridge-custom-radio::before, #uk-payments:checked + .bambridge-custom-radio::before, #uk-service:checked + .bambridge-custom-radio::before,
+ #USD:checked + .bambridge-custom-radio::before, #GBP:checked + .bambridge-custom-radio::before, #uk-service:checked + .bambridge-custom-radio::before,
  #us-service:checked + .bambridge-custom-radio::before {
   transform: scale(1);
 }
- #us-payments:focus + .bambridge-custom-radio, #uk-payments:focus + .bambridge-custom-radio,  #us-service:focus + .bambridge-custom-radio, #uk-service:focus + .bambridge-custom-radio   {
+ #USD:focus + .bambridge-custom-radio, #GBP:focus + .bambridge-custom-radio,  #us-service:focus + .bambridge-custom-radio, #uk-service:focus + .bambridge-custom-radio   {
   box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em #ba9f2a;
 }
 
