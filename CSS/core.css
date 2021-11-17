@@ -203,6 +203,11 @@ ul {
   z-index: 3;
 }
 
+.text-small {
+  font-size: .8rem;
+  opacity: .8;
+}
+
 .tile-icon {
   display: flex;
   justify-content: center;

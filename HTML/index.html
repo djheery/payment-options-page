@@ -24,7 +24,6 @@
           </div>
             <div class="section-checkbox">
               <p class="mgb-10">To view your payment options, please select your chosen currency:</p>
-              <p class="text-small"></p>
               <div class="radio-section radio-payments mgb-20 flex">
                 <div class="radio-btn__container">
                   <div class="radio-control">
@@ -43,22 +42,22 @@
               </div>
             </div>
             <div class="section-checkbox">
-              <p class="mgb-10">Are you Settling a UK or UK service Invoice?:</p>
-              <p class="text-small"></p>
+              <p class="mgb-10">Are you Settling a UK or US service Invoice?:</p>
+              <p class="text-small mgb-10"> (US and UK services must currently be paid separately)</p>
               <div class="radio-section radio-service mgb-20 flex">
                 <div class="radio-btn__container">
                   <div class="radio-control">
                     <input type="radio" name="payment-service" id="uk-service" class="bacc-radio-btn" value="uk-service" checked>
                     <span class="bambridge-custom-radio"></span>
                   </div>
-                  <label for="uk-service" class="radio-label">GBP</label>
+                  <label for="uk-service" class="radio-label">UK Invoice</label>
                 </div>
                 <div class="radio-btn__container">
                   <div class="radio-control">
                     <input type="radio" name="payment-service" id="us-service" class="bacc-radio-btn"value="us-service">
                     <span class="bambridge-custom-radio"></span>
                   </div>
-                  <label for="us-service" class="radio-label">USD</label>
+                  <label for="us-service" class="radio-label">US Ivoice</label>
                 </div>
               </div>
             </div>
@@ -97,6 +96,8 @@
       </div>
     </div>
   </section>
-  <script src="/src/tiles.js"></script>
+  <script src="/src/tiles-state.js"></script>
+  <script src="/src/tiles-ui.js"></script>
+  <script src="/src/tiles-app.js"></script>
 </body>
 </html>
