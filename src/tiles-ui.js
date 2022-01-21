@@ -33,7 +33,7 @@ const TILES_UI = (() => {
     },
     produceLinkdata: (tileData) => {
       if(tileData.email === true) {
-        return  `<a href="mailto:accounts@bambridgeaccountants.com?subject=${TILES_UI.mailCreator(tileData.linkData.subject)}&body=${TILES_UI.mailCreator(tileData.linkData.body)}" class="tile-link"></a>`
+        return  `<a href="mailto:accounts@bambridgeaccountants.co.uk?subject=${TILES_UI.mailCreator(tileData.linkData.subject)}&body=${TILES_UI.mailCreator(tileData.linkData.body)}" class="tile-link"></a>`
       } else {
         return `<a href="${tileData.linkData}" class="tile-link"></a>`
       }
@@ -41,7 +41,7 @@ const TILES_UI = (() => {
     insertLazyLinkData: (obj, elem) => {
       elem.setAttribute(
         'href', 
-        `mailto:accounts@bambridgeaccountants.com?subject=${TILES_UI.mailCreator(obj.subject)}&body=${TILES_UI.mailCreator(obj.body)}`)
+        `mailto:accounts@bambridgeaccountants.co.uk?subject=${TILES_UI.mailCreator(obj.subject)}&body=${TILES_UI.mailCreator(obj.body)}`)
     }, 
     mailCreator: (str) => {
       const stringArr = Array.from(str.split(' '))
