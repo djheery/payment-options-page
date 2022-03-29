@@ -15,7 +15,7 @@ const TILES = (() => {
   return {
     init: () => {
       loadEventListeners()
-      changeTiles({currency: 'uk-payments', serviceType: null})
+      changeTiles({currency: 'GBP', serviceType: null})
       TILES_UI.insertLazyLinkData(
         {
           subject: 'Set Up a Payment Plan',

@@ -49,7 +49,7 @@ const TILES_STATE = (() => {
     {
       title: 'Pay By Card',
       rainbow: false,
-      body: `We accept Debit and Credit cards. Including, but not limited to, Visa, Mastercard, Ammex, Apple Pay. Your payment will be taken via stripe`,
+      body: `We accept Debit and Credit cards. Including, but not limited to, Visa, Mastercard, Amex, Apple Pay. Your payment will be taken via stripe`,
       icon: "/CSS/img/credit-card.png",
       internalLink: false,
       email: true,
@@ -66,6 +66,15 @@ const TILES_STATE = (() => {
       icon: "/CSS/img/phone-call.png",
       email: false,
       linkData: 'https://bambridgeaccountants.com/book-phone-payment'
+    },
+    {
+      title: 'International Money Transfer',
+      rainbow: false,
+      body: 'If you would like to use international money transfer, please use the details below:<br>IBAN - <span class="accent-clr"> BARC 2071 7483 6380 81</span><br>SWIFTBIC - <span class="accent-clr">BARCGB22</span>',
+      internalLink: true,
+      icon: "",
+      email: false,
+      linkData: ''
     },
   ]
 
@@ -131,7 +140,16 @@ const TILES_STATE = (() => {
       internalLink: true,
       email: false,
       linkData: ''
-    }, 
+    },
+    {
+      title: 'International Money Transfer',
+      rainbow: false,
+      body: 'If you would like to use international money transfer, please use the details below:<br>IBAN - <span class="accent-clr"> BARC 2071 7483 6380 81</span><br>SWIFTBIC - <span class="accent-clr">BARCGB22</span>',
+      internalLink: true,
+      icon: "/CSS/img/globe.png",
+      email: false,
+      linkData: ''
+    },
   ]
 
   const currentState = {
